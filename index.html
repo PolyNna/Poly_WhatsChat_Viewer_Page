@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Poly WhatsChat Viewer APK</title>
+<title>WhatsApp Chat Viewer APK</title>
 <style>
 :root {
   --bg: #0b141a;
@@ -42,7 +42,6 @@ h1, h2 {
   margin-bottom: 20px;
   text-align: center;
   line-height: 1.6;
-  font-size: 1.05rem;
 }
 .features {
   display: grid;
@@ -63,10 +62,9 @@ h1, h2 {
 .button-group {
   display: flex;
   justify-content: center;
-  gap: 15px;
   margin-bottom: 40px;
 }
-.button-group button, .button-group a {
+.button-group a {
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -77,7 +75,7 @@ h1, h2 {
   text-decoration: none;
   transition: 0.2s;
 }
-.button-group button:hover, .button-group a:hover {
+.button-group a:hover {
   background: var(--btn-hover);
 }
 .slider-container {
@@ -115,7 +113,6 @@ h1, h2 {
 .prev { left: 10px; }
 .next { right: 10px; }
 @media(max-width:600px){
-  .button-group { flex-direction: column; }
   .prev, .next { width: 35px; height: 35px; font-size: 24px; }
 }
 </style>
@@ -124,53 +121,53 @@ h1, h2 {
 
 <header>
   <img src="icon-192.png" alt="App Icon">
-  <h2>Poly WhatsChat Viewer</h2>
+  <h2>WhatsApp Chat Viewer</h2>
 </header>
 
 <main>
-  <h1>Download Poly WhatsChat Viewer APK</h1>
+  <h1>Download WhatsApp Chat Viewer APK</h1>
   <p class="description">
-    Open your exported WhatsApp chats, view media, search messages, and customize your chat viewer with ease. 
-    Fast, offline, and intuitive — designed for everyone who wants full control over their chat history.
+    View and analyze your WhatsApp chats with ease. 
+    Lightweight and intuitive, our app comes with dark/light mode, media previews, 
+    search, and chat statistics.
   </p>
 
   <div class="features">
     <div class="feature-card">
       <h3>Dark & Light Mode</h3>
-      <p>Comfortable viewing in any lighting, day or night.</p>
+      <p>Switch themes for comfortable viewing any time.</p>
     </div>
     <div class="feature-card">
       <h3>Search Messages</h3>
-      <p>Find any message, media, or link instantly.</p>
+      <p>Find messages, media, or links quickly.</p>
     </div>
     <div class="feature-card">
       <h3>View Media</h3>
-      <p>Preview images, videos, and voice notes directly in the app.</p>
+      <p>Preview images, videos, and voice notes inside the app.</p>
     </div>
     <div class="feature-card">
-      <h3>Chat Stats</h3>
-      <p>Quick overview of total messages and chat activity.</p>
+      <h3>Chat Statistics</h3>
+      <p>Analyze chat patterns and total messages easily.</p>
     </div>
     <div class="feature-card">
       <h3>Fullscreen Media</h3>
-      <p>See every detail with fullscreen images and videos.</p>
+      <p>View images and videos in fullscreen for detailed look.</p>
     </div>
     <div class="feature-card">
-      <h3>Custom Wallpapers</h3>
-      <p>Set backgrounds to personalize your chat viewer.</p>
+      <h3>Wallpaper Customization</h3>
+      <p>Set custom backgrounds for your chat viewer.</p>
     </div>
   </div>
 
   <div class="button-group">
     <a href="Poly_WhatsChat_Viewer.apk" download>⬇️ Download APK</a>
-    <button onclick="copyLink()">📋 Copy Download Link</button>
   </div>
 
   <div class="slider-container">
     <div class="slides">
-      <div class="slide"><img src="Poly_WhatsChat_Viewer_1.jpg" alt="Screenshot 1"></div>
-      <div class="slide"><img src="Poly_WhatsChat_Viewer_2.jpg" alt="Screenshot 2"></div>
-      <div class="slide"><img src="Poly_WhatsChat_Viewer_3.jpg" alt="Screenshot 3"></div>
+      <div class="slide"><img src="screenshot1.jpg" alt="Screenshot 1"></div>
+      <div class="slide"><img src="screenshot2.jpg" alt="Screenshot 2"></div>
+      <div class="slide"><img src="screenshot3.jpg" alt="Screenshot 3"></div>
     </div>
     <button class="prev" onclick="prevSlide()">❮</button>
     <button class="next" onclick="nextSlide()">❯</button>
@@ -178,14 +175,6 @@ h1, h2 {
 </main>
 
 <script>
-/* COPY LINK */
-function copyLink(){
-  const link = "https://github.com/your-username/your-repo/raw/main/Poly_WhatsChat_Viewer.apk";
-  navigator.clipboard.writeText(link).then(()=>{
-    alert("Download link copied to clipboard!");
-  });
-}
-
 /* SLIDER LOGIC */
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
