@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poly WhatsChat Viewer APK</title>
+<style>
+:root {
+  --bg: #0b141a;
+  --text: #e9edef;
+  --accent: #00a884;
+  --header: #111b21;
+  --btn-hover: #007c5f;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+header {
+  background: var(--header);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+header img {
+  width: 50px;
+  height: 50px;
+}
+main {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+h1, h2 {
+  text-align: center;
+}
+.description {
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.feature-card {
+  background: #202c33;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.feature-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+.button-group button, .button-group a {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.button-group button:hover, .button-group a:hover {
+  background: var(--btn-hover);
+}
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+}
+.slide img {
+  width: 100%;
+  display: block;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+@media(max-width:600px){
+  .button-group { flex-direction: column; }
+  .prev, .next { width: 35px; height: 35px; font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="icon-192.png" alt="App Icon">
+  <h2>Poly WhatsChat Viewer</h2>
+</header>
+
+<main>
+  <h1>Download Poly WhatsChat Viewer APK</h1>
+  <p class="description">
+    Open your exported WhatsApp chats, view media, search messages, and customize your chat viewer with ease. 
+    Fast, offline, and intuitive — designed for everyone who wants full control over their chat history.
+  </p>
+
+  <div class="features">
+    <div class="feature-card">
+      <h3>Dark & Light Mode</h3>
+      <p>Comfortable viewing in any lighting, day or night.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Search Messages</h3>
+      <p>Find any message, media, or link instantly.</p>
+    </div>
+    <div class="feature-card">
+      <h3>View Media</h3>
+      <p>Preview images, videos, and voice notes directly in the app.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Chat Stats</h3>
+      <p>Quick overview of total messages and chat activity.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Fullscreen Media</h3>
+      <p>See every detail with fullscreen images and videos.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Custom Wallpapers</h3>
+      <p>Set backgrounds to personalize your chat viewer.</p>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <a href="Poly_WhatsChat_Viewer.apk" download>⬇️ Download APK</a>
+    <button onclick="copyLink()">📋 Copy Download Link</button>
+  </div>
+
+  <div class="slider-container">
+    <div class="slides">
+      <div class="slide"><img src="Poly_WhatsChat_Viewer_1.jpg" alt="Screenshot 1"></div>
+      <div class="slide"><img src="Poly_WhatsChat_Viewer_2.jpg" alt="Screenshot 2"></div>
+      <div class="slide"><img src="Poly_WhatsChat_Viewer_3.jpg" alt="Screenshot 3"></div>
+    </div>
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+  </div>
+</main>
+
+<script>
+/* COPY LINK */
+function copyLink(){
+  const link = "https://github.com/your-username/your-repo/raw/main/Poly_WhatsChat_Viewer.apk";
+  navigator.clipboard.writeText(link).then(()=>{
+    alert("Download link copied to clipboard!");
+  });
+}
+
+/* SLIDER LOGIC */
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const slidesContainer = document.querySelector('.slides');
+
+function showSlide(index){
+  if(index >= slides.length) currentSlide = 0;
+  else if(index < 0) currentSlide = slides.length -1;
+  else currentSlide = index;
+  slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide(){ showSlide(currentSlide + 1); }
+function prevSlide(){ showSlide(currentSlide - 1); }
+
+setInterval(() => { nextSlide(); }, 3000);
+</script>
+
+</body>
+</html>
