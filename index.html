@@ -6,32 +6,39 @@
 <title>Poly WhatsChat Viewer APK</title>
 <style>
 :root {
-  --bg: #0b141a;
-  --text: #e9edef;
-  --accent: linear-gradient(135deg, #00ff00, #006400); /* bright green + dark green */
-  --header: #111b21;
-  --btn-hover: #009966;
+  --bg: #ffffff; /* white background */
+  --text: #0b3d0b; /* dark green text */
+  --accent: #00a884; /* green accent */
+  --header: linear-gradient(90deg, #00a884, #006400); /* gradient green header */
+  --btn-hover: #007c5f;
 }
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* nicer modern font */
   background: var(--bg);
   color: var(--text);
 }
 header {
   background: var(--header);
-  padding: 15px 20px;
+  padding: 20px;
   display: flex;
   align-items: center;
   gap: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 header img {
   width: 50px;
   height: 50px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
 }
 header h2 {
   margin: 0;
-  font-size: 22px;
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 main {
   max-width: 900px;
@@ -41,6 +48,8 @@ main {
 h1 {
   text-align: center;
   margin-bottom: 10px;
+  color: var(--accent);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .description {
   text-align: center;
@@ -54,10 +63,10 @@ h1 {
   margin-bottom: 40px;
 }
 .feature-card {
-  background: #202c33;
+  background: #e6f5f0; /* light greenish card */
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.2s;
 }
 .feature-card:hover {
@@ -65,9 +74,7 @@ h1 {
 }
 .feature-card h3 {
   margin-top: 0;
-  background: var(--accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent);
 }
 .button-group {
   display: flex;
@@ -94,7 +101,7 @@ h1 {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin-bottom: 40px;
 }
 .slides {
@@ -114,7 +121,7 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.3);
   color: white;
   border: none;
   border-radius: 50%;
@@ -183,7 +190,7 @@ h1 {
   </div>
 
   <div class="button-group">
-    <a href="app-release.apk" download>⬇️ Download APK</a>
+    <a href="Poly WhatsChat Viewer.apk" download>⬇️ Download APK</a>
     <a href="#features">📖 Features</a>
   </div>
 
