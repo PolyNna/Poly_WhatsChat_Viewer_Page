@@ -8,9 +8,9 @@
 :root {
   --bg: #0b141a;
   --text: #e9edef;
-  --accent: #00a884;
+  --accent: linear-gradient(135deg, #00ff00, #006400); /* bright green + dark green */
   --header: #111b21;
-  --btn-hover: #007c5f;
+  --btn-hover: #009966;
 }
 body {
   margin: 0;
@@ -58,10 +58,16 @@ h1 {
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
 }
 .feature-card h3 {
   margin-top: 0;
-  color: var(--accent);
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .button-group {
   display: flex;
@@ -78,6 +84,7 @@ h1 {
   color: #fff;
   font-size: 16px;
   transition: 0.2s;
+  display: inline-block;
 }
 .button-group a:hover {
   background: var(--btn-hover);
@@ -100,6 +107,7 @@ h1 {
 .slide img {
   width: 100%;
   display: block;
+  border-radius: 10px;
 }
 .prev, .next {
   position: absolute;
@@ -132,7 +140,7 @@ h1 {
   <h1>Download Poly WhatsChat Viewer APK</h1>
   <p class="description">
     Poly WhatsChat Viewer is your go-to Android app for browsing WhatsApp chats efficiently. 
-    Designed with performance and usability in mind, the app allows you to:
+    Designed for performance and usability, the app allows you to:
   </p>
 
   <div class="features">
@@ -166,12 +174,16 @@ h1 {
     </div>
     <div class="feature-card">
       <h3>Clear Chat</h3>
-      <p>Reset your chat view at any time without losing the original backup.</p>
+      <p>Reset your chat view without deleting the original backup files.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Offline Access</h3>
+      <p>All chats and media are accessible offline, no internet required.</p>
     </div>
   </div>
 
   <div class="button-group">
-    <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/v1.0/Poly_WhatsChat_Viewer_release.apk" download>⬇️ Download APK</a>
+    <a href="app-release.apk" download>⬇️ Download APK</a>
     <a href="#features">📖 Features</a>
   </div>
 
@@ -187,14 +199,15 @@ h1 {
 
   <section id="features">
     <h2>App Features in Detail</h2>
-    <p>Our app allows full access to your WhatsApp export files and provides an interactive way to view chats:</p>
+    <p>Our app provides full access to your WhatsApp export files and interactive chat viewing:</p>
     <ul>
       <li><strong>Interactive Chat Bubbles:</strong> Color-coded sent and received messages.</li>
       <li><strong>Media Support:</strong> View images, videos, and voice notes with play/pause and speed controls.</li>
       <li><strong>Search & Highlight:</strong> Highlight messages containing your search query.</li>
-      <li><strong>Custom Wallpaper & Brightness:</strong> Change background images and adjust brightness for comfort.</li>
-      <li><strong>Full Navigation:</strong> Scroll to first/last messages, total messages counter included.</li>
-      <li><strong>Clear Chat:</strong> Remove all messages temporarily without deleting original files.</li>
+      <li><strong>Custom Wallpaper & Brightness:</strong> Change backgrounds and adjust brightness for comfort.</li>
+      <li><strong>Full Navigation:</strong> Scroll to first/last messages, with total messages counter.</li>
+      <li><strong>Clear Chat:</strong> Remove all messages temporarily without deleting originals.</li>
+      <li><strong>Offline Access:</strong> All chats and media accessible without internet.</li>
     </ul>
   </section>
 </main>
@@ -213,7 +226,7 @@ function showSlide(index){
 }
 function nextSlide(){ showSlide(currentSlide + 1); }
 function prevSlide(){ showSlide(currentSlide - 1); }
-setInterval(() => { nextSlide(); }, 3000);
+setInterval(() => { nextSlide(); }, 3500);
 </script>
 
 </body>
