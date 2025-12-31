@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Poly WhatsChat Viewer</title>
+<title>Poly WhatsChat Viewer APK</title>
 <style>
 :root {
   --bg: #0b141a;
@@ -23,15 +23,15 @@ header {
   padding: 15px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-header h2 {
-  margin: 0;
-  font-size: 22px;
+  gap: 15px;
 }
 header img {
   width: 50px;
   height: 50px;
+}
+header h2 {
+  margin: 0;
+  font-size: 22px;
 }
 main {
   max-width: 900px;
@@ -66,6 +66,8 @@ h1 {
 .button-group {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
   margin-bottom: 40px;
 }
 .button-group a {
@@ -122,45 +124,55 @@ h1 {
 <body>
 
 <header>
-  <h2>Poly WhatsChat Viewer</h2>
   <img src="icon-192.png" alt="App Icon">
+  <h2>Poly WhatsChat Viewer</h2>
 </header>
 
 <main>
   <h1>Download Poly WhatsChat Viewer APK</h1>
   <p class="description">
-    Poly WhatsChat Viewer lets you view and analyze WhatsApp chats effortlessly. Browse messages, preview media, and search through conversations quickly. Features include dark/light modes, chat statistics, full-screen media viewing, and custom wallpaper support.
+    Poly WhatsChat Viewer is your go-to Android app for browsing WhatsApp chats efficiently. 
+    Designed with performance and usability in mind, the app allows you to:
   </p>
 
   <div class="features">
     <div class="feature-card">
       <h3>Dark & Light Mode</h3>
-      <p>Switch themes for comfortable viewing anytime.</p>
+      <p>Toggle between dark and light themes for comfortable reading in any environment.</p>
     </div>
     <div class="feature-card">
       <h3>Search Messages</h3>
-      <p>Quickly find messages, media, or links.</p>
+      <p>Find any message quickly, including text, links, and media filenames.</p>
     </div>
     <div class="feature-card">
       <h3>View Media</h3>
-      <p>Preview images, videos, and voice notes in-app.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Chat Statistics</h3>
-      <p>Analyze message counts and chat patterns efficiently.</p>
+      <p>Preview images, videos, and voice notes directly in the app.</p>
     </div>
     <div class="feature-card">
       <h3>Fullscreen Media</h3>
-      <p>View media in fullscreen for better details.</p>
+      <p>Open images and videos in fullscreen mode with pinch zoom and drag support.</p>
     </div>
     <div class="feature-card">
-      <h3>Custom Wallpaper</h3>
-      <p>Set your own chat background for a personalized experience.</p>
+      <h3>Adjust Wallpaper Brightness 🔆</h3>
+      <p>Set and tweak your chat background brightness for perfect visibility.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Scroll to First & Last Messages</h3>
+      <p>Quickly navigate to the beginning or end of your chat history.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Chat Statistics</h3>
+      <p>View total messages and chat patterns to understand your conversations better.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Clear Chat</h3>
+      <p>Reset your chat view at any time without losing the original backup.</p>
     </div>
   </div>
 
   <div class="button-group">
-    <a href="Poly_WhatsChat_Viewer.apk" download>⬇️ Download APK</a>
+    <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/v1.0/Poly_WhatsChat_Viewer_release.apk" download>⬇️ Download APK</a>
+    <a href="#features">📖 Features</a>
   </div>
 
   <div class="slider-container">
@@ -172,6 +184,19 @@ h1 {
     <button class="prev" onclick="prevSlide()">❮</button>
     <button class="next" onclick="nextSlide()">❯</button>
   </div>
+
+  <section id="features">
+    <h2>App Features in Detail</h2>
+    <p>Our app allows full access to your WhatsApp export files and provides an interactive way to view chats:</p>
+    <ul>
+      <li><strong>Interactive Chat Bubbles:</strong> Color-coded sent and received messages.</li>
+      <li><strong>Media Support:</strong> View images, videos, and voice notes with play/pause and speed controls.</li>
+      <li><strong>Search & Highlight:</strong> Highlight messages containing your search query.</li>
+      <li><strong>Custom Wallpaper & Brightness:</strong> Change background images and adjust brightness for comfort.</li>
+      <li><strong>Full Navigation:</strong> Scroll to first/last messages, total messages counter included.</li>
+      <li><strong>Clear Chat:</strong> Remove all messages temporarily without deleting original files.</li>
+    </ul>
+  </section>
 </main>
 
 <script>
