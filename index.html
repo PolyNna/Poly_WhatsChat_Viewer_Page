@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WhatsApp Chat Viewer APK</title>
+<title>Poly WhatsChat Viewer</title>
 <style>
 :root {
   --bg: #0b141a;
@@ -23,8 +23,11 @@ header {
   padding: 15px 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: space-between;
+}
+header h2 {
+  margin: 0;
+  font-size: 22px;
 }
 header img {
   width: 50px;
@@ -35,19 +38,20 @@ main {
   margin: 20px auto;
   padding: 0 20px;
 }
-h1, h2 {
+h1 {
   text-align: center;
+  margin-bottom: 10px;
 }
 .description {
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .feature-card {
   background: #202c33;
@@ -65,14 +69,12 @@ h1, h2 {
   margin-bottom: 40px;
 }
 .button-group a {
-  padding: 10px 20px;
-  border: none;
+  padding: 12px 24px;
   border-radius: 8px;
-  cursor: pointer;
-  background: var(--accent);
-  color: white;
-  font-size: 16px;
   text-decoration: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
   transition: 0.2s;
 }
 .button-group a:hover {
@@ -120,40 +122,40 @@ h1, h2 {
 <body>
 
 <header>
+  <h2>Poly WhatsChat Viewer</h2>
   <img src="icon-192.png" alt="App Icon">
-  <h2>WhatsApp Chat Viewer</h2>
 </header>
 
 <main>
-  <h1>Download WhatsApp Chat Viewer APK</h1>
+  <h1>Download Poly WhatsChat Viewer APK</h1>
   <p class="description">
-    View and analyze WhatsApp chats with ease. The app is lightweight and intuitive, allowing you to browse through conversations quickly. It includes dark and light modes for comfortable viewing, supports media previews for images, videos, and voice notes, and makes searching for messages fast and simple. Chat statistics are also available to help track patterns and message counts efficiently.
+    Poly WhatsChat Viewer lets you view and analyze WhatsApp chats effortlessly. Browse messages, preview media, and search through conversations quickly. Features include dark/light modes, chat statistics, full-screen media viewing, and custom wallpaper support.
   </p>
 
   <div class="features">
     <div class="feature-card">
       <h3>Dark & Light Mode</h3>
-      <p>Switch themes for comfortable viewing any time.</p>
+      <p>Switch themes for comfortable viewing anytime.</p>
     </div>
     <div class="feature-card">
       <h3>Search Messages</h3>
-      <p>Find messages, media, or links quickly.</p>
+      <p>Quickly find messages, media, or links.</p>
     </div>
     <div class="feature-card">
       <h3>View Media</h3>
-      <p>Preview images, videos, and voice notes inside the app.</p>
+      <p>Preview images, videos, and voice notes in-app.</p>
     </div>
     <div class="feature-card">
       <h3>Chat Statistics</h3>
-      <p>Analyze chat patterns and total messages easily.</p>
+      <p>Analyze message counts and chat patterns efficiently.</p>
     </div>
     <div class="feature-card">
       <h3>Fullscreen Media</h3>
-      <p>View images and videos in fullscreen for detailed look.</p>
+      <p>View media in fullscreen for better details.</p>
     </div>
     <div class="feature-card">
-      <h3>Wallpaper Customization</h3>
-      <p>Set custom backgrounds for your chat viewer.</p>
+      <h3>Custom Wallpaper</h3>
+      <p>Set your own chat background for a personalized experience.</p>
     </div>
   </div>
 
@@ -184,10 +186,8 @@ function showSlide(index){
   else currentSlide = index;
   slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 }
-
 function nextSlide(){ showSlide(currentSlide + 1); }
 function prevSlide(){ showSlide(currentSlide - 1); }
-
 setInterval(() => { nextSlide(); }, 3000);
 </script>
 
