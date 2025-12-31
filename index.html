@@ -4,41 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Poly WhatsChat Viewer APK</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #ffffff; /* white background */
-  --text: #0b3d0b; /* dark green text */
-  --accent: #00a884; /* green accent */
-  --header: linear-gradient(90deg, #00a884, #006400); /* gradient green header */
-  --btn-hover: #007c5f;
+  --bg: #ffffff;
+  --text: #0b3d0b;
+  --accent: #0a7f0a;
+  --header-bg: #064006;
+  --btn-hover: #045a04;
 }
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* nicer modern font */
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
 header {
-  background: var(--header);
-  padding: 20px;
+  background: var(--header-bg);
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   gap: 15px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 0 0 15px 15px;
 }
 header img {
   width: 50px;
   height: 50px;
-  border-radius: 10px;
-  border: 2px solid #ffffff;
 }
 header h2 {
   margin: 0;
-  font-size: 24px;
-  color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  font-size: 22px;
+  color: #b6f5b6;
 }
 main {
   max-width: 900px;
@@ -49,7 +47,6 @@ h1 {
   text-align: center;
   margin-bottom: 10px;
   color: var(--accent);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .description {
   text-align: center;
@@ -63,18 +60,23 @@ h1 {
   margin-bottom: 40px;
 }
 .feature-card {
-  background: #e6f5f0; /* light greenish card */
+  background: #e6f5e6;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-.feature-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
 }
 .feature-card h3 {
   margin-top: 0;
   color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
 }
 .button-group {
   display: flex;
@@ -91,7 +93,6 @@ h1 {
   color: #fff;
   font-size: 16px;
   transition: 0.2s;
-  display: inline-block;
 }
 .button-group a:hover {
   background: var(--btn-hover);
@@ -101,7 +102,7 @@ h1 {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   margin-bottom: 40px;
 }
 .slides {
@@ -114,14 +115,13 @@ h1 {
 .slide img {
   width: 100%;
   display: block;
-  border-radius: 10px;
 }
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.5);
   color: white;
   border: none;
   border-radius: 50%;
@@ -131,6 +131,46 @@ h1 {
 }
 .prev { left: 10px; }
 .next { right: 10px; }
+section#how-to-use {
+  margin-bottom: 40px;
+}
+section#how-to-use h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+section#how-to-use ol {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+section#how-to-use ol li {
+  margin-bottom: 10px;
+}
+footer {
+  background: var(--header-bg);
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 15px 15px 0 0;
+  flex-wrap: wrap;
+  color: #b6f5b6;
+}
+footer a {
+  color: #b6f5b6;
+  font-size: 24px;
+  transition: 0.2s;
+}
+footer a:hover {
+  color: var(--btn-hover);
+}
+footer p {
+  width: 100%;
+  text-align: center;
+  margin: 5px 0 0 0;
+}
 @media(max-width:600px){
   .prev, .next { width: 35px; height: 35px; font-size: 24px; }
 }
@@ -146,52 +186,49 @@ h1 {
 <main>
   <h1>Download Poly WhatsChat Viewer APK</h1>
   <p class="description">
-    Poly WhatsChat Viewer is your go-to Android app for browsing WhatsApp chats efficiently. 
-    Designed for performance and usability, the app allows you to:
+    Poly WhatsChat Viewer is a lightweight Android app for browsing exported WhatsApp chats easily.  
+    Open chat backups, read messages in color-coded bubbles, preview media, search texts or files, and analyze conversations—all without logging into WhatsApp.  
+    It’s ideal for reviewing and understanding your chat histories with full control and privacy.
   </p>
 
   <div class="features">
     <div class="feature-card">
-      <h3>Dark & Light Mode</h3>
-      <p>Toggle between dark and light themes for comfortable reading in any environment.</p>
+      <h3><i class="fas fa-moon"></i> Dark & Light Mode</h3>
+      <p>Switch themes for optimal readability anytime.</p>
     </div>
     <div class="feature-card">
-      <h3>Search Messages</h3>
-      <p>Find any message quickly, including text, links, and media filenames.</p>
+      <h3><i class="fas fa-search"></i> Search Messages</h3>
+      <p>Quickly find messages, media filenames, or links in any chat.</p>
     </div>
     <div class="feature-card">
-      <h3>View Media</h3>
-      <p>Preview images, videos, and voice notes directly in the app.</p>
+      <h3><i class="fas fa-image"></i> View Media</h3>
+      <p>Preview images, videos, and voice notes directly inside the app.</p>
     </div>
     <div class="feature-card">
-      <h3>Fullscreen Media</h3>
-      <p>Open images and videos in fullscreen mode with pinch zoom and drag support.</p>
+      <h3><i class="fas fa-expand"></i> Fullscreen Media</h3>
+      <p>Open media in fullscreen with pinch zoom and navigation support.</p>
     </div>
     <div class="feature-card">
-      <h3>Adjust Wallpaper Brightness 🔆</h3>
-      <p>Set and tweak your chat background brightness for perfect visibility.</p>
+      <h3><i class="fas fa-sun"></i> Adjust Wallpaper Brightness</h3>
+      <p>Set custom chat wallpapers and tweak brightness for comfort.</p>
     </div>
     <div class="feature-card">
-      <h3>Scroll to First & Last Messages</h3>
-      <p>Quickly navigate to the beginning or end of your chat history.</p>
+      <h3><i class="fas fa-arrows-up-down-left-right"></i> Scroll to First & Last Messages</h3>
+      <p>Jump quickly to the beginning or end of any chat.</p>
     </div>
     <div class="feature-card">
-      <h3>Chat Statistics</h3>
-      <p>View total messages and chat patterns to understand your conversations better.</p>
+      <h3><i class="fas fa-chart-line"></i> Chat Statistics</h3>
+      <p>Analyze total messages and conversation patterns for insights.</p>
     </div>
     <div class="feature-card">
-      <h3>Clear Chat</h3>
-      <p>Reset your chat view without deleting the original backup files.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Offline Access</h3>
-      <p>All chats and media are accessible offline, no internet required.</p>
+      <h3><i class="fas fa-trash-alt"></i> Clear Chat</h3>
+      <p>Temporarily clear the chat view without deleting your backups.</p>
     </div>
   </div>
 
   <div class="button-group">
     <a href="Poly WhatsChat Viewer.apk" download>⬇️ Download APK</a>
-    <a href="#features">📖 Features</a>
+    <a href="#how-to-use">📖 How to Use App</a>
   </div>
 
   <div class="slider-container">
@@ -204,23 +241,30 @@ h1 {
     <button class="next" onclick="nextSlide()">❯</button>
   </div>
 
-  <section id="features">
-    <h2>App Features in Detail</h2>
-    <p>Our app provides full access to your WhatsApp export files and interactive chat viewing:</p>
-    <ul>
-      <li><strong>Interactive Chat Bubbles:</strong> Color-coded sent and received messages.</li>
-      <li><strong>Media Support:</strong> View images, videos, and voice notes with play/pause and speed controls.</li>
-      <li><strong>Search & Highlight:</strong> Highlight messages containing your search query.</li>
-      <li><strong>Custom Wallpaper & Brightness:</strong> Change backgrounds and adjust brightness for comfort.</li>
-      <li><strong>Full Navigation:</strong> Scroll to first/last messages, with total messages counter.</li>
-      <li><strong>Clear Chat:</strong> Remove all messages temporarily without deleting originals.</li>
-      <li><strong>Offline Access:</strong> All chats and media accessible without internet.</li>
-    </ul>
+  <section id="how-to-use">
+    <h2>How to Use App</h2>
+    <p>Follow these simple steps to browse your WhatsApp chats:</p>
+    <ol>
+      <li><strong>Open the App:</strong> Launch Poly WhatsChat Viewer on your Android device.</li>
+      <li><strong>Load Chat Backup:</strong> Select your exported WhatsApp chat file (txt or JSON format).</li>
+      <li><strong>Browse Messages:</strong> Messages appear in interactive color-coded bubbles for easy reading.</li>
+      <li><strong>Preview Media:</strong> Tap images, videos, or voice notes to view or play directly.</li>
+      <li><strong>Search Chats:</strong> Use the search bar to find specific messages, links, or media filenames.</li>
+      <li><strong>Adjust Settings:</strong> Switch themes, set wallpapers, and tweak brightness for comfort.</li>
+      <li><strong>Navigate Efficiently:</strong> Jump to first or last message, or view chat statistics.</li>
+      <li><strong>Clear Chat View:</strong> Temporarily clear messages without deleting the original backup.</li>
+    </ol>
   </section>
 </main>
 
+<footer>
+  <a href="https://www.facebook.com/profile.php?id=100008819675807" target="_blank"><i class="fab fa-facebook"></i></a>
+  <a href="https://www.instagram.com/nnannapolycarp/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/in/nnanna-polycarp-3200a3397/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <p>© 2025 Polycarp Nnanna. All rights reserved.</p>
+</footer>
+
 <script>
-/* SLIDER LOGIC */
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const slidesContainer = document.querySelector('.slides');
@@ -233,7 +277,7 @@ function showSlide(index){
 }
 function nextSlide(){ showSlide(currentSlide + 1); }
 function prevSlide(){ showSlide(currentSlide - 1); }
-setInterval(() => { nextSlide(); }, 3500);
+setInterval(() => { nextSlide(); }, 3000);
 </script>
 
 </body>
